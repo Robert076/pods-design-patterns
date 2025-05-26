@@ -1,4 +1,4 @@
-# Ambassador Design Pattern
+# 🧩 Ambassador Design Pattern
 
 The ambassador desgin pattern applies to multi-container pods. We can define two containers in the same pod:
 - Main container
