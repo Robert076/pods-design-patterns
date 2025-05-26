@@ -14,3 +14,5 @@ Some benefits are:
 - Offloading SQL configuration in this case
 
 > ❗️ Please note that although this is just an example, the ambassador container should never be considered an entrypoint to the cluster, but it should only be called from the main container for an outbound connection to something external of the cluster.
+
+Also do not get fooled by the order of the containers in the pod. Kubernetes doesn't care about it, there is no such "main container" or something. No hierarchy exists.
