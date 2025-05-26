@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-with-ambassador
+spec:
+  containers:
+    - name: mysql-proxy-ambassador-container
+      image: proxysql:latest
+      ports:
+        - containerPort: 3306
+      env:
+        - name: DB_HOST
+          value: mysql.xxx.eu-north-1.rds.amazonaws.com # the developer would replace this with the proxy to not use the amazon rds directly
+    - name: nginx-container
+      image: nginx:latest
