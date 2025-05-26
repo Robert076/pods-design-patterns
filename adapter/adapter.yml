@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-with-adapter
+spec:
+  containers:
+    - name: my-adapter-container
+      image: # your image
+      volumeMounts:
+        mountPath: # path to the shared volume
+        name: my-volume
+    - name: nginx-container
+      image: nginx:latest
+      volumeMounts:
+        mountPath: # path to the shared volume
+        name: my-volume
+  volumes:
+    - name: my-volume
+      emptyDir: {}
