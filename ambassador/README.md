@@ -12,3 +12,5 @@ Keep in mind not to add ambassador containers unless your dependency is outside 
 
 Some benefits are:
 - Offloading SQL configuration in this case
+
+> ❗️ Please note that although this is just an example, the ambassador container should never be considered an entrypoint to the cluster, but it should only be called from the main container for an outbound connection to something external of the cluster.
